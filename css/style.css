@@ -1,0 +1,61 @@
+/*start sidebar*/
+a{
+    text-decoration: none;
+}
+
+a.nav-link.text-black:hover {
+    background-color: #00C1FE;
+    border-radius: 8px;
+}
+
+hr{
+    visibility: hidden;
+}
+
+#menu{
+    display: none;
+}
+
+@media (max-width:991px) {
+    .container-fluid #toggel {
+        margin-left: -760px;
+        position: absolute;
+        
+    }
+    .container-fluid #menu:checked+#toggel {
+        margin-left: 0px;
+        transition: 0.8s;
+    }
+    .label {
+        z-index: 1;
+    }
+}
+
+
+/*end sidebar*/
+
+
+/*start student*/
+
+#hr{
+    visibility: visible;
+}
+
+
+/*end student*/
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.container-fluid{
+    height: 100%;
+}
+#logout{
+    margin-right: 15px;
+    margin-top: 80px;
+}
+.text-start{
+    margin-left: 20%;
+}
