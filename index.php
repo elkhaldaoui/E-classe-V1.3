@@ -26,7 +26,11 @@
         <button id="btnadd" type="submit" name="submit" class="btn btn-primary">SIGN IN</button>
         </div>
     </form>
-    
+        <div class="d-grid">
+            <br>
+        <h3> Creat Account :</h3>
+        <a class="btn btn-secondary" href="sign-up.php" role="button">SIGN-UP</a>
+        </div>
         <div class="mt-4 text-center">
         <p>Forgot your password?<a href="#"> Reset Password</a></p>
         </div>

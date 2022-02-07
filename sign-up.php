@@ -2,7 +2,6 @@
 include('./config/db.php');
 include('./controller/regester.php');
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,14 +16,14 @@ include('./controller/regester.php');
 <body>
     <div style="max-width: 400px; min-width: 300px;" class="container bg-white shadow-lg">
         <h1 class="titre m-5"><span class="text-info p-2">|</span>E-classe</h1>
-        <h2 class="text-center mt-5">Sign In</h2>
+        <h2 class="text-center mt-5">Sign Up</h2>
         <p class="text-center mb-5">Enter your credentials to access your account</p>
     <form  method="post">
     <div class="mb-3">
         <?php
             echo $fNameEmptyErr;
         ?>
-        <label class="form-label">NAME</label>
+        <label class="form-label">Name</label>
         <input type="text" name="name" class="form-control opacity-50" placeholder="Enter your name">
         </div>
         <div class="mb-3">
