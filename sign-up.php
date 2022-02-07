@@ -1,6 +1,6 @@
 <?php
-include('./config/db.php');
-include('./controller/regester.php');
+include('config/db.php');
+include('controller/regester.php');
 
 ?>
 <!DOCTYPE html>
@@ -37,11 +37,11 @@ include('./controller/regester.php');
             <?php
             echo $passwordEmptyErr;
             ?>
-        <label>Password</label>
+        <label class="form-label">Password</label>
         <input type="password" name="password" class="form-control opacity-50" placeholder="Enter your password">
         </div>
         <div class="d-grid">
-        <button id="btnadd" type="submit" name="submit" class="btn btn-primary">SIGN IN</button>
+        <button id="btnadd" type="submit" name="submit" class="btn btn-primary">ENTER</button>
         </div>
     </form>
     

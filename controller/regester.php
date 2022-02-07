@@ -1,22 +1,20 @@
 <?php
     
-    // Error & success messages
+    // variables
     global $success_msg, $email_exist, $f_NameErr, $l_NameErr, $_emailErr, $_mobileErr, $_passwordErr;
     global $fNameEmptyErr, $lNameEmptyErr, $emailEmptyErr, $mobileEmptyErr, $passwordEmptyErr, $email_verify_err;
 
-    if(isset($_POST["submit"])) {
-        $name     = $_POST["name"];
-        $email         = $_POST["email"];
-        $password      = $_POST["password"];
+     if(isset($_POST['submit'])) {
+         $name     = $_POST["name"];
+         $email         = $_POST["email"];
+         $password      = $_POST["password"];
 
-        // check if email already exist
-        $email_check_query = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}' ");
-        $rowCount = mysqli_num_rows($email_check_query);
+             // check if email already exist
+             $email_check_query = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}' ");
+             $rowCount = mysqli_num_rows($email_check_query);
 
-
-        // PHP validation
-        // Verify if form values are not empty
-        if(!empty($name) && !empty($email) && !empty($password)){
+            // Verify if form values are not empty
+            if(!empty($name) && !empty($email) && !empty($password)){
             
             // check if user email already exist
             if($rowCount > 0) {
@@ -35,7 +33,10 @@
                     
                     // Create mysql query
                     $sqlQuery = mysqli_query($conn, $sql);
-                    header('location : ./index.php');
+                    echo "
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>";
                     
                     if(!$sqlQuery){
                         die("MySQL query failed!" . mysqli_error($conn));
