@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>DASHBOARD</title>
+    <title>E-classe</title>
 </head>
 <body>
     <!--start sidebar-->
@@ -17,7 +17,7 @@
                 <h2 class="titre text-start"><span class="text-info p-2">|</span>E-classe</h2>
                 <hr>
                 <img class="rounded rounded-circle" src="img/profile.svg" alt="profile">
-                <h4>Admin name</h4>
+                <h4><?php echo $_SESSION['name'];?></h4>
                 <p class="text-info">Admin</p>
                 <hr>
                 <nav class="text-start p-3">
@@ -42,13 +42,13 @@
                     </a>
                     <hr>
                     <a class="nav-link text-black" href="#">
-                        <img class="me-3" src="img/setting.svg" alt=""> Settings
+                        <img class=" me-3" src="img/setting.svg" alt=""> Settings
                     </a>
                     <hr>
                     <hr>
                 </nav>
-                <a href="index.php" class="nav-link text-black" id="logout">
-                    <img class="bi me-2" src="img/out.svg" alt=""> Logout
+                <a href="./controller/logout.php" class="nav-link text-black" id="logout">
+                    <img class=" me-3" src="img/out.svg" alt=""> Logout
                 </a>
                 <hr>
             </div>

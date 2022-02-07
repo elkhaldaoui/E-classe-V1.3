@@ -1,6 +1,10 @@
 <?php
 $id = $_GET['id'];
 include 'assets/navbar.php';
+if(!$_SESSION['login']){
+  header("location:index.php");
+  die;
+}
 $connection = mysqli_connect ("localhost","root","","e_classe_db");
 $queery = "SELECT * FROM payment_details WHERE id=$id ";
 $results = mysqli_query($connection,$queery);

@@ -1,5 +1,9 @@
 <?php
 include 'assets/navbar.php';
+if(!$_SESSION['login']){
+    header("location: index.php");
+    die;
+ }
   if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $course = $_POST['course'];

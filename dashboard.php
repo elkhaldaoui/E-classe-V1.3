@@ -1,6 +1,11 @@
 <?php
-include 'assets/navbar.php';
 include 'config/db.php';
+include 'assets/navbar.php';
+if(!$_SESSION['login']){
+    header("location:index.php");
+    die;
+ }
+
 // for students
 $sqls="SELECT * FROM students";
 $results= mysqli_query($conn, $sqls);
