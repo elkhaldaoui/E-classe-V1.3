@@ -5,7 +5,7 @@
     if(isset($_SESSION['login'])){
         header("Location: dashboard.php");
     };
-                
+     // variables           
     global $wrongPwdErr, $accountNotExistErr, $email_empty_err, $pass_empty_err, $emailPwdErr;
 
     if(isset($_POST['submit'])) {

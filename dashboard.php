@@ -4,7 +4,7 @@ include 'assets/navbar.php';
 if(!$_SESSION['login']){
     header("location:index.php");
     die;
- }
+}
 
 // for students
 $sqls="SELECT * FROM students";

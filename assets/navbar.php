@@ -21,19 +21,19 @@
                 <p class="text-info">Admin</p>
                 <hr>
                 <nav class="text-start p-3">
-                    <a class="nav-link text-black" href="dashboard.php">
+                    <a class="nav-link text-black" href="./dashboard.php">
                         <img class="me-3" src="img/home.svg" alt=""> Home
                     </a>
                     <hr>
-                    <a class="nav-link text-black" href="course.php">
+                    <a class="nav-link text-black" href="./course.php">
                         <img class="me-3" src="img/save.svg" alt=""> Course
                     </a>
                     <hr>
-                    <a class="nav-link text-black" href="Students.php">
+                    <a class="nav-link text-black" href="./Students.php">
                         <img class="me-3" src="img/student.svg" alt=""> Students
                     </a>
                     <hr>
-                    <a class="nav-link text-black" href="payment.php">
+                    <a class="nav-link text-black" href="./payment.php">
                         <img class="me-3" src="img/payement.svg" alt=""> Payment
                     </a>
                     <hr>
