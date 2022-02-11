@@ -41,7 +41,7 @@ include('controller/regester.php');
         <input type="password" name="password" class="form-control opacity-50" placeholder="Enter your password">
         </div>
         <div class="d-grid">
-        <button id="btnadd" type="submit" name="submit" class="btn btn-primary">ENTER</button>
+        <button id="btnadd" type="submit" name="submit" class="btn btn-primary" href="index.php">ENTER</button>
         </div>
     </form>
     

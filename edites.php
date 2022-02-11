@@ -1,6 +1,7 @@
 <?php
 $id = $_GET['id'];
 include 'assets/navbar.php';
+include 'controller/autolog-out.php';
 if(!$_SESSION['login']){
   header("location:index.php");
   die;
