@@ -4,7 +4,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "oussama0611O";
+$password = "";
 $db_name = "e_classe_db";
 
 // Create connection
