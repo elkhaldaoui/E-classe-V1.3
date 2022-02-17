@@ -47,7 +47,7 @@
                     <hr>
                     <hr>
                 </nav>
-                <a href="./controller/logout.php" class="nav-link text-black" id="logout">
+                <a href="./controller/out.php" class="nav-link text-black" id="logout">
                     <img class=" me-3" src="img/out.svg" alt=""> Logout
                 </a>
                 <hr>

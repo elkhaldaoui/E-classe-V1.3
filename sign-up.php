@@ -1,10 +1,7 @@
 <?php
-include('config/db.php');
-include('controller/regester.php');
-if(!$_SESSION['login']){
-    header("location:index.php");
-    die;
-}
+include 'config/db.php';
+include 'controller/regester.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
