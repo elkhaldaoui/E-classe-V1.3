@@ -1,5 +1,4 @@
 <?php
-include 'config/db.php';
 include 'controller/login.php';
 if(isset($_SESSION['login'])){
     header("Location: dashboard.php");

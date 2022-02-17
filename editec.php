@@ -6,7 +6,7 @@ if(!$_SESSION['login']){
   die;
 }
 $connection = mysqli_connect ("localhost","root","","e_classe_db");
-$queery = "SELECT * FROM coures WHERE id=$id ";
+$queery = "SELECT * FROM course WHERE id=$id ";
 $results = mysqli_query($connection,$queery);
 $row = mysqli_fetch_assoc($results);
 if (!$results){

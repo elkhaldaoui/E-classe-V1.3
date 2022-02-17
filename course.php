@@ -1,16 +1,19 @@
 <?php
+    // Database connection
+    include('config/db.php');
+    // to send user to the dashboard page if he is logged in already
+    if(!isset($_SESSION['login'])){
+        header("Location: dashboard.php");
+    };
 include 'assets/navbar.php';
-if(!$_SESSION['login']){
-    header("location: index.php");
-    die;
- }
+
   if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $course = $_POST['course'];
     $info = $_POST['info'];
     $connection = mysqli_connect('localhost', 'root', '','e_classe_db');
     
-    $query = "INSERT INTO coures(name, course, info) VALUES ('$name','$course', '$info')";
+    $query = "INSERT INTO course(name, course, info) VALUES ('$name','$course', '$info')";
     $results = mysqli_query($connection, $query);
     echo"
     <script>
@@ -18,7 +21,7 @@ if(!$_SESSION['login']){
     </script>";
     }
     $connection = mysqli_connect('localhost', 'root', '','e_classe_db');
-    $query = "SELECT * FROM coures";
+    $query = "SELECT * FROM course";
     $results = mysqli_query($connection, $query);
 ?>
 <!--start course-->
@@ -46,7 +49,7 @@ if(!$_SESSION['login']){
                                 <tbody>
                                     <?php
                                       $connection = mysqli_connect ("localhost","root","","e_classe_db");
-                                      $queery = 'SELECT * FROM coures' ;
+                                      $queery = 'SELECT * FROM course' ;
                                       $results = mysqli_query($connection,$queery);
                                       if (!$results){
                                           die ('FAILED');

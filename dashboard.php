@@ -4,14 +4,14 @@ include 'assets/navbar.php';
 if(!$_SESSION['login']){
     header("location:index.php");
     die;
- }
+}
 
 // for students
 $sqls="SELECT * FROM students";
 $results= mysqli_query($conn, $sqls);
 $std= mysqli_num_rows($results);
 // for courses
-$sqlc="SELECT * FROM coures";
+$sqlc="SELECT * FROM course";
 $resultc= mysqli_query($conn, $sqlc);
 $crs= mysqli_num_rows($resultc);
 // for paiments
