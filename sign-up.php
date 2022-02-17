@@ -4,8 +4,7 @@ include('controller/regester.php');
 if(!$_SESSION['login']){
     header("location:index.php");
     die;
- }
-
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +44,7 @@ if(!$_SESSION['login']){
         <input type="password" name="password" class="form-control opacity-50" placeholder="Enter your password">
         </div>
         <div class="d-grid">
-        <button id="btnadd" type="submit" name="submit" class="btn btn-primary">ENTER</button>
+        <button id="btnadd" type="submit" name="submit" class="btn btn-primary" href="index.php">ENTER</button>
         </div>
     </form>
     
