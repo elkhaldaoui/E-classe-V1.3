@@ -1,7 +1,6 @@
 <?php
 include 'config/db.php';
 include 'assets/navbar.php';
-include 'controller/autolog-out.php';
 if(!$_SESSION['login']){
     header("location:index.php");
     die;

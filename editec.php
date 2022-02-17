@@ -1,10 +1,10 @@
 <?php
 $id = $_GET['id'];
+include 'config/db.php';
 include 'assets/navbar.php';
-include 'controller/autolog-out.php';
 if(!$_SESSION['login']){
-  header("location:index.php");
-  die;
+    header("location:index.php");
+    die;
 }
 $connection = mysqli_connect ("localhost","root","","e_classe_db");
 $queery = "SELECT * FROM course WHERE id=$id ";
@@ -13,6 +13,7 @@ $row = mysqli_fetch_assoc($results);
 if (!$results){
 die ('FAILED');
 }
+
 ?>
 <style>
 #form{
