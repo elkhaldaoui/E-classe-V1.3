@@ -1,5 +1,6 @@
 <?php
 include 'config/db.php';
+include 'controller/logout.php';
 include 'assets/navbar.php';
 if(!$_SESSION['login']){
     header("location:index.php");

@@ -1,6 +1,7 @@
 <?php
     // Database connection
     include('config/db.php');
+    include 'controller/logout.php';
     // to send user to the dashboard page if he is logged in already
     if(!isset($_SESSION['login'])){
         header("Location: dashboard.php");
