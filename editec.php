@@ -7,9 +7,9 @@ if(!$_SESSION['login']){
     header("location:index.php");
     die;
 }
-$connection = mysqli_connect ("localhost","root","","e_classe_db");
+
 $queery = "SELECT * FROM course WHERE id=$id ";
-$results = mysqli_query($connection,$queery);
+$results = mysqli_query($conn,$queery);
 $row = mysqli_fetch_assoc($results);
 if (!$results){
 die ('FAILED');
@@ -24,7 +24,7 @@ die ('FAILED');
 
 <div class="container">
     <br><br>
-  <form action="/action_page.php" id="form" >
+  <form method="POST" id="form" >
       <div class="form-group">
         <label for="name">Teacher Name:</label>
         <input type="text" class="form-control" id="email" placeholder="Enter Name" name="name" value="<?php echo $row['name']?>">
@@ -37,13 +37,28 @@ die ('FAILED');
         <label for="phone">INFO:</label>
         <textarea class="form-control" id="info" name="info"  rows="3"><?php echo $row['info']?></textarea>
       </div>
-     
       <div class="checkbox">
         <label><input type="checkbox" name="remember"> Are you sure</label>
       </div>
-    <a class="btn btn-primary" href="course.php" role="button">Submit</a>
+    <button class="btn btn-primary" name="update"  type="submit">Update</button>
   </form>
 </div>
+<?php
+
+  if (isset($_POST['update'])) {
+    
+  $name = $_POST['name'];
+  $course = $_POST['course'];
+  $info = $_POST['info'];
+  
+
+
+  $sql= "UPDATE course
+  SET name='$name', course='$course', info='$info' WHERE id = $id";
+  $result= mysqli_query($conn, $sql);
+  echo "<script>window.location.href = 'course.php';</script>";
+  }
+?>
 
 <?php
 include './js.php';

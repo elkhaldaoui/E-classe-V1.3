@@ -1,5 +1,5 @@
 <?php
-if (time() - $_SESSION['timestamp'] >  10 ) {
+if (time() - $_SESSION['timestamp'] >  3600 * 24 ) {
     // after time log out
     session_start();
     session_destroy();

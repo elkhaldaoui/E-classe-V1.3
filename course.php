@@ -12,9 +12,10 @@ include 'assets/navbar.php';
     $name = $_POST['name'];
     $course = $_POST['course'];
     $info = $_POST['info'];
+
     $connection = mysqli_connect('localhost', 'root', '','e_classe_db');
     
-    $query = "INSERT INTO course(name, course, info) VALUES ('$name','$course', '$info')";
+    $query = "INSERT INTO course(name, course, info ) VALUES ('$name','$course', '$info')";
     $results = mysqli_query($connection, $query);
     echo"
     <script>

@@ -8,11 +8,11 @@ $password = "";
 $db_name = "e_classe_db";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password,$db_name);
+$conn = mysqli_connect($servername, $username, $password, $db_name);
 
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-?>
+?> 
