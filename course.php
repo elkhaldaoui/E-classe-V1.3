@@ -92,6 +92,14 @@ include 'assets/navbar.php';
                                       </div>
                                       </div>
                                       ';
+                                      $index++;
+                                      }
+                                      if ($_SESSION["delete"]) {
+                                        echo '<div class="position-relative bot-0 alert alert-danger alert-dismissible text-center fade show" role="alert">
+                                        Succesfully deleted.
+                                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>';
+                                        $_SESSION["delete"] = 0;
                                       }
                                      ?>    
                                 </tbody>

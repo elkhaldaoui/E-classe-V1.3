@@ -4,5 +4,8 @@ $queery = "SELECT * FROM course ";
 $results = mysqli_query($connection,$queery);
 $id = $_GET['id'];
 mysqli_query($connection, "DELETE FROM course WHERE id=$id");
+$_SESSION['message'] = "Address deleted!"; 
+session_start();
+$_SESSION['delete']++;
 
 echo "<script>window.location.href = 'course.php';</script>";
