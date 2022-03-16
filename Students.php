@@ -19,7 +19,7 @@ include 'assets/navbar.php';
     $results = mysqli_query($connection, $query);
     echo"
     <script>
-    window.location.href = 'Students.php';
+    window.location.href = 'Students.php';        
     </script>";
     }
     $connection = mysqli_connect('localhost', 'root', '','e_classe_db');
