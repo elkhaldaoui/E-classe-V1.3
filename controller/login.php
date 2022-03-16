@@ -46,6 +46,7 @@
                        $_SESSION['id'] = $id;
                        $_SESSION['name'] = $name;
                        $_SESSION['email'] = $email;
+                       $_SESSION['delete'] = 0;
                        $_SESSION['login'] = true;
                        $_SESSION['timestamp'] = time();
 

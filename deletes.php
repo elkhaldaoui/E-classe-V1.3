@@ -5,5 +5,8 @@ $results = mysqli_query($connection,$queery);
 $id = $_GET['id'];
 mysqli_query($connection, "DELETE FROM students WHERE id=$id");
 $_SESSION['message'] = "Address deleted!"; 
+session_start();
+$_SESSION['delete']++;
+
 
 echo "<script>window.location.href = 'Students.php';</script>";
