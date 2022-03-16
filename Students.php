@@ -108,6 +108,9 @@ include 'assets/navbar.php';
                         </div>
                     </div>
                     <!--end student-->
+                    <?php
+
+                    ?>
     
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,3 +160,4 @@ include 'assets/navbar.php';
     <?php
     include './js.php';
     ?>
+  
